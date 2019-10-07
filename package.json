@@ -1,0 +1,40 @@
+{
+  "name": "tennis-player-stats-api-nodejs",
+  "version": "0.0.0",
+  "description": "API to return tennis player stats",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./lib/index.js | bunyan",
+    "pretest": "docker-compose  -f ./test/docker-compose.yml up -d && sleep 5",
+    "test": "NODE_ENV=test ALLOW_CONFIG_MUTATIONS=1 mocha --exit ./test/integration/tests/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sachavent/tennis-player-stats-api-nodejs.git"
+  },
+  "keywords": [
+    "API",
+    "tennis",
+    "stats"
+  ],
+  "author": "sachavent",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sachavent/tennis-player-stats-api-nodejs/issues"
+  },
+  "homepage": "https://github.com/Sachavent/tennis-player-stats-api-nodejs#readme",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "config": "^3.2.3",
+    "express": "^4.17.1",
+    "request-promise": "^4.2.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chlg-cli": "^1.0.0",
+    "eslint": "^6.5.1",
+    "mocha": "^6.2.1",
+    "mock-http-server": "^1.4.0",
+    "request": "^2.88.0"
+  }
+}
