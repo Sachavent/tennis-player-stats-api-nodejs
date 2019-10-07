@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  mock:
+    image: "node:10.16.3-alpine"
+    command: /bin/sh -c "npm i mock-http-server && node server/index.js"
+    working_dir: "/mock"
+    volumes:
+      - ./integration/mock/mock-server.js:/mock/server/index.js
+      - ./integration/mock/:/mock/server
+    ports:
+      - "9000:9000/tcp"
