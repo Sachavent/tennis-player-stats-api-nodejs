@@ -33,7 +33,7 @@
     "chai": "^4.2.0",
     "chlg-cli": "^1.0.0",
     "eslint": "^6.5.1",
-    "mocha": "^6.2.1",
+    "mocha": "^10.2.0",
     "mock-http-server": "^1.4.0",
     "request": "^2.88.0"
   }
